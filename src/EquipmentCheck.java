@@ -11,7 +11,7 @@ public class EquipmentCheck {
         for (int i = 0; i < equipmentNames.length; i++) {
             System.out.print("[" + (i+1) + "] ");
             System.out.print(equipmentNames[i]);
-            System.out.print(" (" + eqUseYear[i] + "년 )");
+            System.out.print(" (" + eqUseYear[i] + "년)");
             if (eqUseYear[i]>=REPLACE_YEAR) {
                 System.out.print(" -> 교체 대상");
                 replaceCount +=1;

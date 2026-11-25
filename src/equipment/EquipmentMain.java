@@ -15,6 +15,23 @@ public class EquipmentMain {
         equipments.add(new Equipment("마우스-E", "마우스", 7));
         equipments.add(new Equipment("모니터-F", "모니터", 2));
         equipments.add(new Equipment("노트북-B", "노트북", 2));
+        try {
+            equipments.add(new Equipment("노트북-Z", "노트북", -3));
+        } catch (IllegalArgumentException e) {
+            System.out.println("[등록 실패] " + e.getMessage());
+        }
+
+        try {
+            equipments.add(new Equipment("", "프린터", 3));
+        } catch (IllegalArgumentException e) {
+            System.out.println("[등록 실패] " + e.getMessage());
+        }
+
+        try {
+            equipments.add(new Server("", -2));
+        } catch (IllegalArgumentException e) {
+            System.out.println("[등록 실패] " + e.getMessage());
+        }
 
         int no = 1;
         int replaceYes = 0;
